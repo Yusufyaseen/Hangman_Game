@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hangman</title>
+    <link href="images/js.png" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="hang.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="gameinfo">
+        <div
+          class="gamename"
+          style="font-size: 23px;font-weight: bold;color: #009688;"
+        >
+          <span style="color: rgb(6, 49, 17);font-size: 35px;">H</span>angman
+        </div>
+        <div
+          class="category"
+          style="font-size: 23px;font-weight: bold;margin-top:10px;"
+        >
+          Question : <span></span>
+        </div>
+      </div>
+      <hr />
+      <div class="raw">
+        <div class="hangman-draw">
+          <div class="thedraw">
+            <div class="thestand"></div>
+            <div class="thehang"></div>
+            <div class="therope"></div>
+            <div class="theman">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="hands">
+                <div class="handsl"></div>
+                <div class="handsr"></div>
+              </div>
+              <div class="legs">
+                <div class="legsr"></div>
+                <div class="legsl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="letters"></div>
+      </div>
+      <hr />
+      <div class="letters-guess"></div>
+    </div>
+    <audio id="success" src="sounds/correct.mp4" preload="auto"></audio>
+    <audio id="fail" src="sounds/wrong.mp4" preload="auto"></audio>
+    <audio id="right" src="sounds/right.mp4" preload="auto"></audio>
+    <audio id="wrong" src="sounds/fail.mp4" preload="auto"></audio>
+    <script src="hang.js" type="text/babel"></script>
+  </body>
+</html>
